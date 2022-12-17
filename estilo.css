@@ -254,7 +254,7 @@ main{  /*Envolve todo corpo do site*/
 @media (max-width:300px){ /*diminuição de tamamanho de itens para caber na tabela*/
     #titulo{ /*altera tamaho do titulo*/
         font-size: 1em;
-        width: 150px;
+        width: 180px;
         line-height: 25px;
         margin-top: 20px;
         border: 1px solid red;
@@ -276,7 +276,7 @@ main{  /*Envolve todo corpo do site*/
 @media (min-width:301px) and (max-width:460px){ /*impede que a tabela e formulario ultrapasse o tamanho da tela*/
     #titulo{
         font-size: 1.3em;
-        width: 200px;
+        width: 250px;
         border: 1px solid rgb(0, 0, 0);
     }
 

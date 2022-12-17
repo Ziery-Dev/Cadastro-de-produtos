@@ -24,7 +24,7 @@ header{ /*container topo*/
     left: 50%;
     transform: translate(-50%);
     cursor: pointer;
-    border: 1px solid green;
+   
     
   
    
@@ -257,7 +257,7 @@ main{  /*Envolve todo corpo do site*/
         width: 180px;
         line-height: 25px;
         margin-top: 20px;
-        border: 1px solid red;
+      
     }
     #form_produtos{
         border: none;
@@ -277,7 +277,7 @@ main{  /*Envolve todo corpo do site*/
     #titulo{
         font-size: 1.3em;
         width: 250px;
-        border: 1px solid rgb(0, 0, 0);
+        
     }
 
     #form_produtos{

@@ -252,15 +252,15 @@ main{  /*Envolve todo corpo do site*/
 }
 @media (max-width:300px){ /*diminuição de tamamanho de itens para caber na tabela*/
     #titulo{ /*altera tamaho do titulo*/
-        font-size: 1.3em;
+        font-size: 0.9em;
         width: 200px;
         line-height: 25px;
-        border: 1px solid red;
+        margin-top: 20px;
     }
 }
 @media (min-width:301px) and (max-width:405px){
     #titulo{
-        font-size: 1.5em;
+        font-size: 1.1em;
         width: 230px;
     }
 }

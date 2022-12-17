@@ -24,6 +24,7 @@ header{ /*container topo*/
     left: 50%;
     transform: translate(-50%);
     cursor: pointer;
+    border: 1px solid green;
     
   
    
@@ -252,22 +253,33 @@ main{  /*Envolve todo corpo do site*/
 }
 @media (max-width:300px){ /*diminuição de tamamanho de itens para caber na tabela*/
     #titulo{ /*altera tamaho do titulo*/
-        font-size: 0.6em;
-        width: 200px;
+        font-size: 1em;
+        width: 150px;
         line-height: 25px;
         margin-top: 20px;
         border: 1px solid red;
     }
-}
-@media (min-width:301px) and (max-width:405px){
-    #titulo{
-        font-size: 1em;
-        width: 230px;
+    #form_produtos{
+        border: none;
+        padding: 0;
+        background-color: white;   
+    }
+
+    #cont_tabela{ /*Section onde vai a tabela e o título da mesma*/
+        width: 95%;
+        border: 1px;
+        padding: 0;
     }
 }
 
-@media (max-width:460px){ /*impede que a tabela e formulario ultrapasse o tamanho da tela*/
-   
+
+@media (min-width:301px) and (max-width:460px){ /*impede que a tabela e formulario ultrapasse o tamanho da tela*/
+    #titulo{
+        font-size: 1.3em;
+        width: 200px;
+        border: 1px solid rgb(0, 0, 0);
+    }
+
     #form_produtos{
         border: none;
         padding: 0;

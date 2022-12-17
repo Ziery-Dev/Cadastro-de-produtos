@@ -9,7 +9,7 @@ header{ /*container topo*/
     height: 80px;
     background-color: rgb(132, 168, 184);
     display: flex;
-    overflow-x: hidden;
+ 
     
    
 }
@@ -252,15 +252,16 @@ main{  /*Envolve todo corpo do site*/
 }
 @media (max-width:300px){ /*diminuição de tamamanho de itens para caber na tabela*/
     #titulo{ /*altera tamaho do titulo*/
-        font-size: 0.9em;
+        font-size: 0.6em;
         width: 200px;
         line-height: 25px;
         margin-top: 20px;
+        border: 1px solid red;
     }
 }
 @media (min-width:301px) and (max-width:405px){
     #titulo{
-        font-size: 1.1em;
+        font-size: 1em;
         width: 230px;
     }
 }

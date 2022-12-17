@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*##Tudo que está no topo##*/
+header{ /*container topo*/
+    height: 80px;
+    background-color: rgb(132, 168, 184);
+    display: flex;
+    overflow-x: hidden;
+    
+   
+}
+
+
+#titulo{ /*titulo do site*/
+    width: 300px;
+    text-align: center;
+    line-height: 80px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    
+  
+   
+}
+
+#botao-hb{ /*botão responsivo*/
+    margin-top: 30px;
+    margin-right: 15px;
+    display: none;
+    width: 20px;
+    height: 20px;
+    right: 0;
+    transition: all 0.8s;
+}
+.btn-normal{ /*poisition do botão responsivo*/
+    position: absolute;
+}
+
+.btn-animacao{ /*position do botão responsivo enquanto é um X, para acompnahar a rolagem de tela quando o menu responsivo está aberto*/
+    position: fixed;
+}
+
+    /*animação das linhas do botão (que faz virar X)*/
+
+ .btn-animacao .l1-hb{ 
+    transform: rotate(45deg);
+    transition: all 0.8s;
+    background-color: black;
+    
+    
+}
+ .btn-animacao .l2-hb{ 
+    transform: rotate(-45deg);
+    margin-top: -6px;
+    transition: all 0.8s;
+    background-color: black;
+
+    
+    
+}
+ .btn-animacao .l3-hb{ 
+    transform: rotate(-45deg);
+    margin-top: -6px;
+    transition: all 0.8s;
+    background-color: black; 
+}
+
+.btn-normal .l1-hb, .btn-normal .l2-hb, .btn-normal .l3-hb{ /*transição reversa da linha do botão*/
+    transition: all 0.8s;
+}
+    /*Fim animação das linhas do botão*/
+
+ 
+
+.l1-hb, .l2-hb, .l3-hb{ /*linhas do botão responsivo*/
+    border-radius: 3px;
+    width: 20px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    margin: 3px 0;
+}
+
+
+#lista-nav{ /*navegação*/
+    line-height: 80px;
+}
+
+.nav-normal{ /*navegação que é alterada para que o o menu apareça*/
+    position: absolute;
+    right: 0;
+  
+}
+#lista-nav a{ /*cada item da lista da navegação*/
+    margin: 0 8px;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+#lista-nav a:hover{ /*ao passar o mouse sobre os itens da navegação*/
+    background-color: white;
+    color:rgb(132, 168, 184) ;
+    border-radius: 5px;
+}
+/*Fim tudo que está no topo*/
+
+
+/*Corpo do site*/
+
+main{  /*Envolve todo corpo do site*/
+    margin-top: 100px;
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+    width: 95%;
+}
+#adicionar_produtos{ /*todo o container Onde se insere nome e preço dos produtos*/
+    width: 450px;
+    position: fixed;
+    left: 10%;  
+}
+#form_produtos{ /*tag form dos inputs*/
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;   
+}
+#adicionar_produtos label { /*Titulo dos inputs do formulario*/
+    margin: 0 auto;
+    width: 60%;
+    font-weight: bold;
+    font-size: 1.3em;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: rgb(3, 30, 43);
+}
+#adicionar_produtos input { /*inputs dos formularios*/
+    margin: 0 auto;
+    font-size: 1.3em;
+    width: 60%;
+    display: block;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 0.5px solid rgb(122, 161, 206);
+    padding-left: 8px; 
+}
+#adicionar_produtos .btn-add{ /*Botão para para confirmar cadastro do novo produto*/
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(123, 198, 228);
+    margin: 0 auto;
+    width: 60%;
+    height: 40px;
+    display: block;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: white;
+}
+#adicionar_produtos .btn-add:hover{ /*ao passar o mouse sobre o botão de cadastrar*/
+    background-color: rgb(23, 115, 177);
+    cursor: pointer;
+ }
+
+
+    /*tabela*/
+ #cont_tabela{ /*Section onde vai a tabela e o título da mesma*/
+    width: 450px;
+    margin-top: 5px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+#cont_tabela h2 { /*título da tabela*/
+    width: 210px;
+    margin: 10px auto;
+}
+
+#tabela{ /*Tabela propriamente dita, sem contar o titulo*/
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+        /*bordas da tabela*/
+#tabela th{ 
+    padding: 10px;
+    border: 1px solid rgb(138, 135, 135);
+    background-color: rgb(232, 240, 247);
+}
+#tabela td{ /*conteudos da tabela*/
+    width: 60%;
+    padding: 15px;
+    border:  1px solid rgb(138, 134, 134);  
+}
+        /*Fim bordas da tabela*/
+
+#mensagem{
+    display: none;
+}  
+    /*fim tabela*/
+
+/*FIm corpo*/
+
+
+
+/*Responsividade*/
+@media (max-width:279px){ /*diminuição de tamamanho de itens para caber na tabela*/
+
+    #adicionar_produtos label { /*Titulo dos inputs do formulario*/
+        margin: 0 110px;
+        width: 50%;
+        font-weight: bold;
+        font-size: 1em;
+        
+    }
+
+    #adicionar_produtos input { /*inputs dos formularios*/
+        margin: 0 110px;
+        font-size: 1.2em;
+        width: 50%;
+        display: block; 
+    }
+
+    #adicionar_produtos .btn-add{ /*Botão para adicionar novo produto*/
+        border-radius: 10px;
+        border: none;
+        background-color: rgb(123, 198, 228);
+        margin: 0 110px;
+        width: 50%;
+        font-size: 1.2em;
+        
+    }
+
+    main{
+        width: 100%;
+        margin-top: 0;
+        justify-content: space-around;
+    }
+    #adicionar_produtos
+    {
+        left: 50%;
+        transform: translate(-50%);
+    }
+    #cont_tabela{
+        margin-top: 130px;
+    }
+
+   
+}
+@media (max-width:300px){ /*diminuição de tamamanho de itens para caber na tabela*/
+    #titulo{ /*altera tamaho do titulo*/
+        font-size: 1.5em;
+        width: 120px;
+        line-height: 25px;
+    }
+}
+@media (min-width:301px) and (max-width:405px){
+    #titulo{
+        font-size: 1.5em;
+        width: 230px;
+    }
+}
+
+@media (max-width:460px){ /*impede que a tabela e formulario ultrapasse o tamanho da tela*/
+   
+    #form_produtos{
+        border: none;
+        padding: 0;
+        background-color: white;   
+    }
+
+    #cont_tabela{ /*Section onde vai a tabela e o título da mesma*/
+        width: 95%;
+        border: 1px;
+        padding: 0;
+    }
+}
+@media (max-width: 920px){ /*Altera menu de navegação a partir do tamanho de tela estabelecido*/
+    .nav-normal{ /*navegação enquanto oculta*/
+        text-align: center;
+        position: fixed;
+        top: 90px;
+        right: -100px; 
+        overflow: hidden;
+        transition: all 1s;
+        z-index: 10;
+    }
+    .nav-normal a {
+        display: block;
+    }
+    .nav-responsivo{ /*navegação ao ser mostrada*/
+        text-align: center;
+        top: 90px;
+        position: fixed;
+        right: 5px;
+        transition: all 1s;
+        background-color: rgb(132, 148, 182);
+        border-radius: 5px;
+        z-index: 10;
+    }
+    .nav-responsivo a{
+        display: block;
+        
+    }
+
+    #lista-nav a{ /*cada item da lista da navegação*/
+        margin: 50px 8px;
+        line-height: 20px;
+    }
+    #botao-hb {
+        display: block;
+    }
+}
+@media (max-width: 1069px) and (min-width: 280px){ /*altera a disposição do input e tabela a partir do tamanho de tela estabelecido*/
+    main{
+        width: 100%;
+        margin-top: 0;
+        justify-content: center;
+    }
+    #adicionar_produtos
+    {
+        left: 50%;
+        transform: translate(-50%);
+    }
+    #cont_tabela{
+        margin-top: 250px;
+    }
+}

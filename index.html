@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar produto</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body >
+
+    <header> <!--topo do site-->
+        <h1 id="titulo">
+            Cadastro de produtos
+        </h1>
+
+        <div class="btn-normal" id="botao-hb" onclick="alterarMenu(), transicaoBtn()">
+            <div class="l1-hb"></div>
+            <div class="l2-hb"></div>
+            <div class="l3-hb"></div>
+        </div>
+
+        <nav class="nav-normal" id="lista-nav">
+            <a href="index.html">Home</a>
+            <a href="index.html">Sobre</a>
+            <a href="index.html">Contato</a>
+            <a href="index.html">Saiba mais</a> 
+        </nav>
+    </header> <!--fim topo do site-->
+
+    <main> <!--corpo do site-->
+        <section id="adicionar_produtos">
+            <form id="form_produtos">
+                <label for="input_nome">Insira o nome do produto:</label>
+                <input type="text" onkeypress="return ApenasLetras(event,this)" name="input_nome" id="input_nome" placeholder="Ex: Celular">
+                <label for="input_preco">Insira o preço do produto:</label>
+                <input type="number" name="input_preco" id="input_preco" placeholder="Ex: 2000">
+                <input type="button" value="Cadastrar" class="btn-add" onclick="adicionarProduto(input_nome.value, input_preco.value)">
+            </form>
+        </section>
+
+        <section id="cont_tabela">
+            <h2>Lista de produtos</h2>
+            <table id="tabela">
+                <thead>
+                    <tr >
+                        <th>Produto</th>
+                        <th>Preço</th>
+                        <th>Código</th>
+                    </tr>
+                </thead>
+              
+            </table>    
+        </section>
+    </main> <!--fim corpo do site-->
+
+
+    <script src="script.js"></script>
+</body>
+</html>
